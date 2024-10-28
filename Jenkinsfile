@@ -9,7 +9,7 @@ pipeline {
         }
     stage ('TEST') {
         parallel {
-            satge ('Unit Test') {
+            stage ('Unit Test') {
                 steps {
                     echo 'Running Units Tests'
                 }
@@ -19,7 +19,7 @@ pipeline {
                     echo 'Running Intregation Tests'
                 }
             }
-            satge ('UI Test') {
+            stage ('UI Test') {
                 steps {
                    echo 'Running UI Tests' 
                 }
