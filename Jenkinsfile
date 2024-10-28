@@ -7,10 +7,10 @@ pipeline {
                 echo 'Hello BLUID!!'
             }
         }
-        stage('TEST') {
-            steps {
-                echo 'Hello TEST!!'
-            }
+    stage('TEST') {
+        steps {
+            echo 'Hello TEST!!'
+        }
         }
     }
 }
