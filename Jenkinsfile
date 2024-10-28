@@ -7,7 +7,7 @@ pipeline {
                 echo 'Hello BLUID!!'
             }
         }
-        stage('TEST'){
+        stage('TEST') {
             steps {
                 echp 'Hello TEST!!'
             }
