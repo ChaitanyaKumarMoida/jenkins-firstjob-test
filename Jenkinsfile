@@ -2,24 +2,34 @@ pipeline {
     agent any
 
     stages {
-        stage('Parallel Stages') {
-            parallel {
-                stage ('stage 1') {
-                    steps {
-                        echo 'Running stage 1'
-                    }
+        stage ('BUILD') {
+            steps {
+                echo 'Buld Repo'
+            } 
+        }
+    stage ('TEST') {
+        parallel {
+            satge ('Unit Test') {
+                steps {
+                    echo 'Running Units Tests'
                 }
-                stage ('stage 2') {
-                    steps {
-                        echo 'Running satge 2'
-                    }
+            }
+            stage ('Intregation Tests') {
+                steps {
+                    echo 'Running Intregation Tests'
                 }
-                stage ('stage 3') {
-                    steps {
-                        echo 'Running stage 3'
-                    }
+            }
+            satge ('UI Test') {
+                steps {
+                   echo 'Running UI Tests' 
                 }
             }
         }
+    }
+    stage ('DEPLOY') {
+        steps {
+            echo 'Deploying ....'
+        }
+    }
     }
 }
