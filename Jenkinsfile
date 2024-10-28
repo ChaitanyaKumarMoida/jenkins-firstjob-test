@@ -9,7 +9,7 @@ pipeline {
         }
         stage('TEST') {
             steps {
-                echp 'Hello TEST!!'
+                echo 'Hello TEST!!'
             }
         }
     }
