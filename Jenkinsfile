@@ -1,2 +1,2 @@
-@ Libarary('ctlrTemplate') _
+@Library('ctlrTemplate') _
 ctlr()
